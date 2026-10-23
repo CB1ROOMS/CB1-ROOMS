@@ -10,8 +10,8 @@
 <section id="stay"><div class="wrap"><div class="eyebrow">Your stay</div><h2>Make yourself at home</h2><p class="muted">A comfortable private room with shared facilities, conveniently located near Cambridge.</p><div class="grid"><div class="card"><h3>Private double room</h3><p>Relax in your own double bedroom after a day exploring or working in Cambridge.</p></div><div class="card"><h3>Shared bathroom</h3><p>Bathroom facilities are shared within the home.</p></div><div class="card"><h3>Shared kitchen</h3><p>Access to a spacious shared kitchen during your stay.</p></div></div></div></section>
 <section class="soft"><div class="wrap split"><div><div class="eyebrow">Stay longer, save more</div><h2>Planning a longer visit?</h2><p>Short stays start at <strong>£85 per night</strong>. Special discounted rates may be available for weekly or monthly stays.</p><a class="btn" href="#enquire">Ask about longer stays</a></div><img src="20261009_145819.jpg" alt="CB1 Rooms property photograph" loading="lazy"></div></section>
 <section id="gallery"><div class="wrap"><div class="eyebrow">Explore the space</div><h2>Photo gallery</h2><p class="muted">Browse photographs of the accommodation. Click a photo to enlarge it.</p><div class="gallery">
-<button class="photo" onclick="openPhoto(0)"><img src="20261009_145248.jpg" loading="lazy" alt="CB1 Rooms accommodation photograph 1"></button>
-<button class="photo" onclick="openPhoto(1)"><img src="20261009_145312.jpg" loading="lazy" alt="CB1 Rooms accommodation photograph 2"></button>
+<button class="photo" onclick="openPhoto(0)"><img src="20261009_145312.jpg" loading="lazy" alt="CB1 Rooms accommodation photograph 2"></button>
+<button class="photo" onclick="openPhoto(1)"><img src="20261009_145248.jpg" loading="lazy" alt="CB1 Rooms accommodation photograph 1"></button>
 <button class="photo" onclick="openPhoto(2)"><img src="20261009_145819.jpg" loading="lazy" alt="CB1 Rooms accommodation photograph 13"></button>
 <button class="photo" onclick="openPhoto(3)"><img src="20261009_145357.jpg" loading="lazy" alt="CB1 Rooms accommodation photograph 3"></button>
 <button class="photo" onclick="openPhoto(4)"><img src="20261009_145449.jpg" loading="lazy" alt="CB1 Rooms accommodation photograph 4"></button>
@@ -29,7 +29,7 @@
 <footer><div class="wrap">© <span id="year"></span> CB1 Rooms · Short stay accommodation near Cambridge · <a href="mailto:stay@cb1rooms.com">stay@cb1rooms.com</a></div></footer>
 <dialog id="viewer"><button onclick="document.getElementById('viewer').close()">Close ✕</button><br><img id="large" alt="Enlarged accommodation photo"></dialog>
 <script>
-const photos=["20261009_145248.jpg", "20261009_145312.jpg", "20261009_145819.jpg", "20261009_145357.jpg", "20261009_145449.jpg", "20261009_145452.jpg", "20261009_145512.jpg", "20261009_145523.jpg", "20261009_145531.jpg", "20261009_145537.jpg", "20261009_145543.jpg", "20261009_145732.jpg"];
+const photos=["20261009_145312.jpg", "20261009_145248.jpg", "20261009_145819.jpg", "20261009_145357.jpg", "20261009_145449.jpg", "20261009_145452.jpg", "20261009_145512.jpg", "20261009_145523.jpg", "20261009_145531.jpg", "20261009_145537.jpg", "20261009_145543.jpg", "20261009_145732.jpg"];
 document.getElementById('year').textContent=new Date().getFullYear();
 function openPhoto(i){document.getElementById('large').src=photos[i];document.getElementById('viewer').showModal()}
 document.getElementById('booking').addEventListener('submit', function(e) {
