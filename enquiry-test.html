@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CB1 Rooms - Enquiry Test</title>
+</head>
+<body>
+  <h2>CB1 Rooms - Booking Enquiry Test</h2>
+  <p>This is a test page, not the live booking form.</p>
+
+  <form id="testForm">
+    <label>Guest name</label><br>
+    <input name="name" value="Website Test Guest" required><br><br>
+
+    <label>Email</label><br>
+    <input name="email" type="email"
+           value="stay@cb1rooms.com" required><br><br>
+
+    <label>Check-in</label><br>
+    <input name="checkin" type="date" value="2027-02-15" required><br><br>
+
+    <label>Check-out</label><br>
+    <input name="checkout" type="date" value="2027-02-17" required><br><br>
+
+    <label>Message</label><br>
+    <textarea name="message">Testing from the website</textarea><br><br>
+
+    <input name="website" style="display:none"
+           tabindex="-1" autocomplete="off">
+
+    <button type="submit">Send Test Enquiry</button>
+  </form>
+
+  <p id="status"></p>
+
+  <script>
+    const endpoint =
+      "https://script.google.com/macros/s/AKfycbxIqF-ztUC68iU4HrfZjsmiDv2yDFfttyr8YJ-6e-kb7jGosbhnjagdVC2ALO8o0LPXpQ/exec";
+
+    document.getElementById("testForm").addEventListener("submit", async function(event) {
+      event.preventDefault();
+
+      const status = document.getElementById("status");
+      status.textContent = "Sending test enquiry...";
+
+      const data = Object.fromEntries(new FormData(event.target));
+
+      try {
+        await fetch(endpoint, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "text/plain" },
+          body: JSON.stringify(data)
+        });
+
+        status.textContent =
+          "Request sent. Check Google Sheets and your email to confirm receipt.";
+      } catch (error) {
+        status.textContent =
+          "Could not send the request. Please check your connection.";
+      }
+    });
+  </script>
+</body>
+</html>
