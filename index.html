@@ -16,12 +16,10 @@
 <button class="photo" onclick="openPhoto(3)"><img src="20261009_145732.jpg" loading="lazy" alt="CB1 Rooms accommodation photograph 12"></button>
 <button class="photo" onclick="openPhoto(4)"><img src="20261009_145357.jpg" loading="lazy" alt="CB1 Rooms accommodation photograph 3"></button>
 <button class="photo" onclick="openPhoto(5)"><img src="20261009_145449.jpg" loading="lazy" alt="CB1 Rooms accommodation photograph 4"></button>
-<button class="photo" onclick="openPhoto(6)"><img src="20261009_145452.jpg" loading="lazy" alt="CB1 Rooms accommodation photograph 5"></button>
-<button class="photo" onclick="openPhoto(7)"><img src="20261009_145512.jpg" loading="lazy" alt="CB1 Rooms accommodation photograph 6"></button>
-<button class="photo" onclick="openPhoto(8)"><img src="20261009_145523.jpg" loading="lazy" alt="CB1 Rooms accommodation photograph 8"></button>
-<button class="photo" onclick="openPhoto(9)"><img src="20261009_145531.jpg" loading="lazy" alt="CB1 Rooms accommodation photograph 9"></button>
-<button class="photo" onclick="openPhoto(10)"><img src="20261009_145537.jpg" loading="lazy" alt="CB1 Rooms accommodation photograph 10"></button>
-<button class="photo" onclick="openPhoto(11)"><img src="20261009_145543.jpg" loading="lazy" alt="CB1 Rooms accommodation photograph 11"></button>
+<button class="photo" onclick="openPhoto(6)"><img src="20261009_145523.jpg" loading="lazy" alt="CB1 Rooms accommodation photograph 8"></button>
+<button class="photo" onclick="openPhoto(7)"><img src="20261009_145531.jpg" loading="lazy" alt="CB1 Rooms accommodation photograph 9"></button>
+<button class="photo" onclick="openPhoto(8)"><img src="20261009_145537.jpg" loading="lazy" alt="CB1 Rooms accommodation photograph 10"></button>
+<button class="photo" onclick="openPhoto(9)"><img src="20261009_145543.jpg" loading="lazy" alt="CB1 Rooms accommodation photograph 11"></button>
 
 </div></div></section>
 <section id="about" class="soft"><div class="wrap"><div class="eyebrow">About CB1 Rooms</div><h2>Your home away from home</h2><p>Welcome to CB1 Rooms, offering a comfortable base in Teversham near Cambridge. Whether you're visiting for work, family or a short break, get in touch to discuss your dates and requirements.</p><p><strong>Location:</strong> Teversham, Cambridge, CB1 area, United Kingdom.</p></div></section>
@@ -30,7 +28,7 @@
 <footer><div class="wrap">© <span id="year"></span> CB1 Rooms · Short stay accommodation near Cambridge · <a href="mailto:stay@cb1rooms.com">stay@cb1rooms.com</a></div></footer>
 <dialog id="viewer"><button onclick="document.getElementById('viewer').close()">Close ✕</button><br><img id="large" alt="Enlarged accommodation photo"></dialog>
 <script>
-const photos=["20261009_145312.jpg", "20261009_145248.jpg", "20261009_145819.jpg", "20261009_145732.jpg", "20261009_145357.jpg", "20261009_145449.jpg", "20261009_145452.jpg", "20261009_145512.jpg", "20261009_145523.jpg", "20261009_145531.jpg", "20261009_145537.jpg", "20261009_145543.jpg"];
+const photos=["20261009_145312.jpg", "20261009_145248.jpg", "20261009_145819.jpg", "20261009_145732.jpg", "20261009_145357.jpg", "20261009_145449.jpg", "20261009_145523.jpg", "20261009_145531.jpg", "20261009_145537.jpg", "20261009_145543.jpg"];
 document.getElementById('year').textContent=new Date().getFullYear();
 function openPhoto(i){document.getElementById('large').src=photos[i];document.getElementById('viewer').showModal()}
 document.getElementById('booking').addEventListener('submit', function(e) {
